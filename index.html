@@ -6,93 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawsome Pet Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pet-bg {
+            background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+    
+        .pet-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+    
+        .content-layer {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
-    <header class="bg-purple-600 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold">Pawsome Pet Services</h1>
-            <p class="mt-2">Your Trusted Pet Care Specialists</p>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-4 py-8">
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-purple-800">Why Choose Our Pet Services?</h2>
-            <p class="mb-4">At Pawsome Pet Services, we understand that your pets are family. We provide comprehensive
-                care
-                with love and attention to detail, ensuring your furry friends receive the best treatment possible.</p>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2 text-purple-700">Benefits of Our Services</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Professional and experienced pet care specialists</li>
-                    <li>Personalized care plans for each pet</li>
-                    <li>Convenient scheduling and reliable service</li>
-                    <li>Safe and comfortable environment for your pets</li>
-                </ul>
+<body class="bg-gray-100 font-sans pet-bg">
+    <div class="content-layer">
+        <header class="bg-purple-600 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-6">
+                <h1 class="text-3xl font-bold">Pawsome Pet Services</h1>
+                <p class="mt-2">Your Trusted Pet Care Specialists</p>
             </div>
-        </section>
+        </header>
 
-        <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2 text-purple-700">Our Pet Care Services</h3>
-                <p>We offer a variety of services for all types of pets including:</p>
-                <div class="flex flex-wrap gap-2 mt-3">
-                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full">Dog Walking</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Pet Sitting</span>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full">Grooming</span>
-                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">Training</span>
+        <main class="container mx-auto px-4 py-8">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-purple-800">Why Choose Our Pet Services?</h2>
+                <p class="mb-4">At Pawsome Pet Services, we understand that your pets are family. We provide comprehensive
+                    care
+                    with love and attention to detail, ensuring your furry friends receive the best treatment possible.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Benefits of Our Services</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Professional and experienced pet care specialists</li>
+                        <li>Personalized care plans for each pet</li>
+                        <li>Convenient scheduling and reliable service</li>
+                        <li>Safe and comfortable environment for your pets</li>
+                    </ul>
                 </div>
-            </div>
+            </section>
 
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2 text-purple-700">Why Pet Owners Love Us</h3>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Reliable & Trustworthy Care
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Flexible Scheduling
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Experienced Pet Handlers
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Regular Updates & Photos
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
+            <section class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Our Pet Care Services</h3>
+                    <p>We offer a variety of services for all types of pets including:</p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full">Dog Walking</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Pet Sitting</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full">Grooming</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">Training</span>
+                    </div>
+                </div>
 
-    <footer class="bg-purple-800 text-white mt-12 py-6">
-        <div class="container mx-auto px-4">
-            <p class="text-center">&copy; 2023 Pawsome Pet Services. All rights reserved.</p>
-            <p class="text-center mt-2">Providing Loving Care for Your Furry Family Members</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Why Pet Owners Love Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Reliable & Trustworthy Care
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Flexible Scheduling
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Experienced Pet Handlers
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Regular Updates & Photos
+                        </li>
+                    </ul>
+                </div>
+                </section>
+<!-- Dog Services Section -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4 text-purple-800">Dog Services</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Dog Walking" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Premium Dog Walking</h3>
+            <p>Individual or group walks tailored to your dog's energy level and social preferences.</p>
         </div>
-    </footer>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Dog Training" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Dog Training</h3>
+            <p>Obedience training, behavior modification, and specialized training for puppies and adult dogs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Dog Grooming" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Dog Grooming</h3>
+            <p>Full-service grooming including bathing, haircuts, nail trimming, and ear cleaning.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Cat Services Section -->
+<section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4 text-purple-800">Cat Services</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Cat Sitting" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Sitting</h3>
+            <p>In-home care for your feline friends, including feeding, litter box maintenance, and playtime.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1570824104453-508955ab713e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Cat Grooming" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Grooming</h3>
+            <p>Gentle grooming services including brushing, nail trimming, and specialized care for long-haired breeds.
+            </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="Cat Enrichment" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Enrichment</h3>
+            <p>Interactive play sessions and environmental enrichment to keep your cat mentally stimulated and happy.
+            </p>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <footer class="bg-purple-800 text-white mt-12 py-6">
+            <div class="container mx-auto px-4">
+                <p class="text-center">&copy; 2023 Pawsome Pet Services. All rights reserved.</p>
+                <p class="text-center mt-2">Providing Loving Care for Your Furry Family Members</p>
+            </div>
+        </footer>
+    </div>
 </body>
