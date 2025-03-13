@@ -6,33 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawsome Pet Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pet-bg {
+            background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .pet-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: 1;
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
-    <header class="bg-purple-600 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold">Pawsome Pet Services</h1>
-            <p class="mt-2">Your Trusted Pet Care Specialists</p>
-        </div>
-    </header>
+<body class="bg-gray-100 font-sans pet-bg">
+    <div class="content-layer">
+        <header class="bg-purple-600 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-6">
+                <h1 class="text-3xl font-bold">Pawsome Pet Services</h1>
+                <p class="mt-2">Your Trusted Pet Care Specialists</p>
+            </div>
+        </header>
 
-    <nav class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-3">
-            <ol class="flex items-center space-x-2 text-sm text-gray-600">
-                <li>
-                    <a href="#" class="hover:text-purple-600">Home</a>
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-gray-500">Services</span>
-                </li>
-            </ol>
-        </div>
-    </nav>
+        <nav class="bg-white shadow-sm">
+            <div class="container mx-auto px-4 py-3">
+                <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                    <li>
+                        <a href="#" class="hover:text-purple-600">Home</a>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-500">Services</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+    </div>
+    </header>
 
     <main class="container mx-auto px-4 py-8">
         <section class="mb-12">
@@ -51,7 +78,7 @@
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-8">
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-2 text-purple-700">Our Pet Care Services</h3>
                 <p>We offer a variety of services for all types of pets including:</p>
@@ -105,6 +132,61 @@
                 </ul>
             </div>
         </section>
+        <!-- Dog Services Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-purple-800">Dog Services</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Dog Walking" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Premium Dog Walking</h3>
+                    <p>Individual or group walks tailored to your dog's energy level and social preferences.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Dog Training" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Dog Training</h3>
+                    <p>Obedience training, behavior modification, and specialized training for puppies and adult dogs.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Dog Grooming" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Dog Grooming</h3>
+                    <p>Full-service grooming including bathing, haircuts, nail trimming, and ear cleaning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cat Services Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-purple-800">Cat Services</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Cat Sitting" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Sitting</h3>
+                    <p>In-home care for your feline friends, including feeding, litter box maintenance, and playtime.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1570824104453-508955ab713e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Cat Grooming" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Grooming</h3>
+                    <p>Gentle grooming services including brushing, nail trimming, and specialized care for long-haired
+                        breeds.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Cat Enrichment" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Cat Enrichment</h3>
+                    <p>Interactive play sessions and environmental enrichment to keep your cat mentally stimulated and
+                        happy.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-purple-800 text-white mt-12 py-6">
@@ -113,4 +195,5 @@
             <p class="text-center mt-2">Providing Loving Care for Your Furry Family Members</p>
         </div>
     </footer>
+    </div>
 </body>
